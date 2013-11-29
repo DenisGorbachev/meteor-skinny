@@ -1,3 +1,6 @@
+Template.BASENAME.helpers
+#  helper: ->
+
 Template.BASENAME.rendered = () ->
 
 Template.BASENAME.events

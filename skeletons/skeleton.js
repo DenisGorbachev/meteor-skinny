@@ -1,3 +1,9 @@
+Template.BASENAME.helpers({
+//  helper: function() {
+//
+//  }
+});
+
 Template.BASENAME.rendered = function() {
 
 };
