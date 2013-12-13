@@ -4,4 +4,4 @@ Template.BASENAME.helpers
 Template.BASENAME.rendered = ->
 
 Template.BASENAME.events
-#  "click .selector": (e, template) ->
+#  "click .selector": (e, t) ->
