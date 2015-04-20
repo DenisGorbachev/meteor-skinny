@@ -9,9 +9,7 @@ program
   .version("0.0.1")
   .option("-j, --jade", "Use Jade for template")
   .option("-c, --coffee", "Use Coffeescript for code")
-  .option("-l, --less", "Use LESS for styles")
   .option("-s, --stylus", "Use Stylus for styles")
-  .option("-p, --prepend", "Prepend file extension with target language")
 program.parse(process.argv)
 
 if !program.args[0]
@@ -27,9 +25,9 @@ prependixes =
   "styl": "css"
 mkdirp(dirname, 0o0755, ->
   extensions = []
-  extensions.push(if program.jade then "jade" else "html")
-  extensions.push(if program.coffee then "coffee" else "js")
-  extensions.push(if program.less then "less" else if program.stylus then "styl" else "css")
+  extensions.push("jade") if program.jade
+  extensions.push("coffee") if program.coffee
+  extensions.push("styl") if program.stylus
   for extension in extensions
     fs.readFile(currentWorkingDirname+"/skeletons/skeleton."+extension, {encoding: "utf-8"}, _.partial((extension, err, data) ->
       err && throw err
