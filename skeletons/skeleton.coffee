@@ -1,7 +1,7 @@
 Template.BASENAME.helpers
 #  helper: ->
 
-Template.BASENAME.rendered = ->
+Template.BASENAME.onRendered ->
 
 Template.BASENAME.events
 #  "click .selector": (event, template) ->
